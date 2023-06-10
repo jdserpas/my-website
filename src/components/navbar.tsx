@@ -3,10 +3,15 @@ import HomeIcon from '../../public/home-icon.svg';
 import ResumeIcon from '../../public/resume-icon.svg';
 import LinkedInIcon from '../../public/linkedin-icon.svg';
 import GitHubIcon from '../../public/github-icon.svg';
-import { HStack, Image, ScaleFade, StackDivider, useDisclosure, Button, Show, Text } from "@chakra-ui/react";
+import { HStack, Image, ScaleFade, StackDivider, useDisclosure, Button, Show, Text, chakra, shouldForwardProp } from "@chakra-ui/react";
 import { useEffect } from 'react';
+import { isValidMotionProp, motion } from 'framer-motion';
 
 export default function NavBar() {
+  const SlideIn = chakra(motion.div, {
+    shouldForwardProp: (prop) => isValidMotionProp(prop) || shouldForwardProp(prop),
+  })
+
   const {isOpen, onToggle} = useDisclosure();
   
   useEffect(()=> {
@@ -15,7 +20,10 @@ export default function NavBar() {
 
   return (
   <nav className="bg-transparent">
-    <ScaleFade initialScale={0.1} in={isOpen}>
+    {/* <ScaleFade initialScale={0.1} in={isOpen}> */}
+    <SlideIn
+      animate={{x: 0, transition: {type:'spring', duration:0.35}}}
+      initial={{x:-1000}}>
       <HStack p={'10'} h={'20vh'} w={{base: '90vw',md:'70vw'}} justify={'space-around'} divider={<StackDivider borderColor={'black'} fontFamily={'Garamond, serif'}/>}>
         <Button colorScheme='whiteAlpha' flexShrink={1} boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
           <Image src={HomeIcon.src} alt="Home" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
@@ -42,6 +50,7 @@ export default function NavBar() {
           </Show>
         </Button>
       </HStack>
-    </ScaleFade>
+    </SlideIn>
+    {/* </ScaleFade> */}
   </nav>)
 }
