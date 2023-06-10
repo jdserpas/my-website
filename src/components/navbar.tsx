@@ -3,7 +3,7 @@ import HomeIcon from '../../public/home-icon.svg';
 import ResumeIcon from '../../public/resume-icon.svg';
 import LinkedInIcon from '../../public/linkedin-icon.svg';
 import GitHubIcon from '../../public/github-icon.svg';
-import { HStack, Image, ScaleFade, Slide, StackDivider, useDisclosure, Button } from "@chakra-ui/react";
+import { HStack, Image, ScaleFade, StackDivider, useDisclosure, Button } from "@chakra-ui/react";
 import { useEffect } from 'react';
 
 export default function NavBar() {
