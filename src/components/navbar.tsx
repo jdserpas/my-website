@@ -3,7 +3,7 @@ import HomeIcon from '../../public/home-icon.svg';
 import ResumeIcon from '../../public/resume-icon.svg';
 import LinkedInIcon from '../../public/linkedin-icon.svg';
 import GitHubIcon from '../../public/github-icon.svg';
-import { HStack, Image, StackDivider, Button, Show, Text, chakra, shouldForwardProp, Box } from "@chakra-ui/react";
+import { HStack, Image, StackDivider, Button, Show, Text, chakra, shouldForwardProp, Box, Link } from "@chakra-ui/react";
 import { Variants, isValidMotionProp, motion } from 'framer-motion';
 
 export default function NavBar() {
@@ -47,15 +47,16 @@ export default function NavBar() {
           </Show>
           </Box>
         </Button>
-        <Button colorScheme='whiteAlpha' boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
-          <Box as={motion.div} variants={item}>
-            <Image src={ResumeIcon.src} alt="Resume" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
-          
-          <Show above='lg'>
-            <Text color={'black'} fontSize={'xl'}>Resume</Text>
-          </Show>
-          </Box>
-        </Button>
+        <Link href='documents/Josh-Serpas-Resume.pdf' download='Josh-Serpas-Resume.pdf'>
+          <Button colorScheme='whiteAlpha' boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
+            <Box as={motion.div} variants={item}>
+              <Image src={ResumeIcon.src} alt="Resume" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
+            <Show above='lg'>
+              <Text color={'black'} fontSize={'xl'}>Resume</Text>
+            </Show>
+            </Box>
+          </Button>
+        </Link>
         <Button colorScheme='whiteAlpha' boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
           <Box as={motion.div} variants={item}>
             <Image src={LinkedInIcon.src} alt="LinkedIn" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
