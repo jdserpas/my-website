@@ -1,5 +1,5 @@
-import Home from "../page"
-import {render} from '@testing-library/react'
+import { render } from "@testing-library/react";
+import NavBar from "../navbar";
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -15,8 +15,9 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-describe('Home Page', ()=> {
-  it('renders', ()=> {
-    render(<Home/>)
-  })
-})
+describe('NavBar', () => {
+  it(`let's the user download my resume`, ()=> {
+    //arrange
+    render(<NavBar/>);
+  });
+});
