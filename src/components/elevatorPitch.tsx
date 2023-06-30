@@ -15,11 +15,11 @@ export default function ElevatorPitch() {
               .pauseFor(1500)
               .typeString(`I'm Josue Se`)
               .deleteChars(5)
-              .typeString('h Serpas. ')
+              .typeString('h Serpas.<br/>')
               .pauseFor(1000)
               .typeString('I make computers do cool things for a living...')
               .pauseFor(500)
-              .typeString(`Wanna know how?\n Download my <u><a class="typewriter-link" href='/document/Josh-Serpas-Resume.pdf' download>Resume<a/></u>.`)
+              .typeString(`Wanna know how? <br/>Download my <u><a class="typewriter-link" href='/documents/Josh-Serpas-Resume.pdf' download>Resume<a/></u>.`)
               .start();
           }}
         />
