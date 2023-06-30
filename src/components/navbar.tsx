@@ -58,7 +58,7 @@ export default function NavBar() {
             </Box>
           </Button>
         </Link>
-        <Link href='https://linkedin.com/in/jdserpas'>
+        <Link href='https://linkedin.com/in/jdserpas' target='_blank'>
           <Button colorScheme='whiteAlpha' boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
             <Box as={motion.div} variants={item}>
               <Image src={LinkedInIcon.src} alt="LinkedIn" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
@@ -68,7 +68,7 @@ export default function NavBar() {
             </Box>
           </Button>
         </Link>
-        <Link href='https://github.com/jdserpas'>
+        <Link href='https://github.com/jdserpas' target='_blank'>
           <Button colorScheme='whiteAlpha' boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
             <Box as={motion.div} variants={item}>
               <Image src={GitHubIcon.src} alt="GitHub" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
