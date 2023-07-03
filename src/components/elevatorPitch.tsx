@@ -1,6 +1,5 @@
 'use client'
 import { Box, Button, Flex, SlideFade, Text, useDisclosure } from '@chakra-ui/react';
-import { delay } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 
 export default function ElevatorPitch() {
