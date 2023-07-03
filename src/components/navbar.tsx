@@ -39,7 +39,7 @@ export default function NavBar() {
       initial="hidden">
       <HStack p={'10'} h={'20vh'} w={{base: '90vw',md:'70vw'}} justify={'space-around'} divider={<StackDivider borderColor={'black'} fontFamily={'Garamond, serif'}/>}>
         <Link href='/'>
-          <Button colorScheme='whiteAlpha' flexShrink={1} boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
+          <Button colorScheme='whiteAlpha' bg={'transparent'} flexShrink={1} boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
             <Box as={motion.div} variants={item}>
               <Image src={HomeIcon.src} alt="Home" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
               <Show above='lg'>
@@ -49,7 +49,7 @@ export default function NavBar() {
           </Button>
         </Link>
         <Link href='documents/Josh-Serpas-Resume.pdf' download='Josh-Serpas-Resume.pdf'>
-          <Button colorScheme='whiteAlpha' boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
+          <Button colorScheme='whiteAlpha' bg={'transparent'} boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
             <Box as={motion.div} variants={item}>
               <Image src={ResumeIcon.src} alt="Resume" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
             <Show above='lg'>
@@ -59,7 +59,7 @@ export default function NavBar() {
           </Button>
         </Link>
         <Link href='https://linkedin.com/in/jdserpas' target='_blank'>
-          <Button colorScheme='whiteAlpha' boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
+          <Button colorScheme='whiteAlpha' bg={'transparent'} boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
             <Box as={motion.div} variants={item}>
               <Image src={LinkedInIcon.src} alt="LinkedIn" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
             <Show above='lg'>
@@ -69,7 +69,7 @@ export default function NavBar() {
           </Button>
         </Link>
         <Link href='https://github.com/jdserpas' target='_blank'>
-          <Button colorScheme='whiteAlpha' boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
+          <Button colorScheme='whiteAlpha' bg={'transparent'} boxSize={{base:'75', md:'100'}} w={{lg: 'fit-content'}}>
             <Box as={motion.div} variants={item}>
               <Image src={GitHubIcon.src} alt="GitHub" flexShrink={'inherit'} boxSize={{base:'fit-content', lg:'75'}}/>
             <Show above='lg'>
