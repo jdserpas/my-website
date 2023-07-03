@@ -28,7 +28,7 @@ export default function ElevatorPitch() {
           }}
         />
         <SlideFade in={isOpen}>
-          <Button height={'75px'} fontSize={'23px'} my={'5'} width={'300px'} variant={'outline'} size={'lg'} color={'white'} _hover={{ color: 'black', bg:'white'}}>Download my Resume</Button>
+          <Button height={{base: '75px', md:'100px'}} width={{base: '300px', md:'500px'}} fontSize={{base: '23px', md:'34px'}} my={'5'}  variant={'outline'} size={'lg'} color={'white'} _hover={{ color: 'black', bg:'white'}}>Download my Resume</Button>
         </SlideFade>
       </Box>
     </Flex>
